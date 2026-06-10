@@ -1,0 +1,6 @@
+PJSIP_ROOT = /opt/pjsip
+PJSIP_INCLUDE_DIR = $(PJSIP_ROOT)/include
+PJSIP_LIB_DIR = $(PJSIP_ROOT)/lib
+HEADER_SEARCH_PATHS = $(inherited) $(PJSIP_INCLUDE_DIR)
+LIBRARY_SEARCH_PATHS = $(inherited) $(PJSIP_LIB_DIR)
+OTHER_LDFLAGS = $(inherited) -lpjsua-arm-apple-darwin -lpjsip-ua-arm-apple-darwin -lpjsip-simple-arm-apple-darwin -lpjsip-arm-apple-darwin -lpjmedia-codec-arm-apple-darwin -lpjmedia-videodev-arm-apple-darwin -lpjmedia-audiodev-arm-apple-darwin -lpjmedia-arm-apple-darwin -lpjnath-arm-apple-darwin -lpjlib-util-arm-apple-darwin -lsrtp-arm-apple-darwin -lresample-arm-apple-darwin -lgsmcodec-arm-apple-darwin -lspeex-arm-apple-darwin -lilbccodec-arm-apple-darwin -lg7221codec-arm-apple-darwin -lyuv-arm-apple-darwin -lwebrtc-arm-apple-darwin -lpj-arm-apple-darwin -framework AudioToolbox -framework AVFoundation -framework CoreAudio -framework CoreMedia -framework VideoToolbox -framework Network -framework Security -framework SystemConfiguration -framework AppKit -lsqlite3

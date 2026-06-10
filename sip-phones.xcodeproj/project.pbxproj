@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000000000000101 /* SIPModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000001 /* SIPModels.swift */; };
+		100000000000000000000102 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000002 /* KeychainManager.swift */; };
+		100000000000000000000103 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000003 /* DatabaseManager.swift */; };
+		100000000000000000000104 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000004 /* LogManager.swift */; };
+		100000000000000000000105 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000005 /* NotificationManager.swift */; };
+		100000000000000000000106 /* SIPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000006 /* SIPService.swift */; };
+		100000000000000000000107 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000007 /* AudioManager.swift */; };
+		100000000000000000000108 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000008 /* SettingsStore.swift */; };
+		100000000000000000000109 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000009 /* SettingsViewModel.swift */; };
+		100000000000000000000110 /* DialerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000010 /* DialerViewModel.swift */; };
+		100000000000000000000111 /* ActiveCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000011 /* ActiveCallViewModel.swift */; };
+		100000000000000000000112 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000012 /* HistoryViewModel.swift */; };
+		100000000000000000000113 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000013 /* ContentView.swift */; };
+		100000000000000000000114 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000014 /* SettingsView.swift */; };
+		100000000000000000000115 /* DialerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000015 /* DialerView.swift */; };
+		100000000000000000000116 /* ActiveCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000016 /* ActiveCallView.swift */; };
+		100000000000000000000117 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000017 /* HistoryView.swift */; };
+		100000000000000000000118 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000018 /* LogsView.swift */; };
+		100000000000000000000119 /* sip-phonesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000019 /* sip-phonesApp.swift */; };
+		100000000000000000000120 /* PJSIPBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000020 /* PJSIPBridge.mm */; };
+		100000000000000000000121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100000000000000000000021 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		100000000000000000000001 /* SIPModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIPModels.swift; sourceTree = "<group>"; };
+		100000000000000000000002 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		100000000000000000000003 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		100000000000000000000004 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		100000000000000000000005 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		100000000000000000000006 /* SIPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIPService.swift; sourceTree = "<group>"; };
+		100000000000000000000007 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		100000000000000000000008 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		100000000000000000000009 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		100000000000000000000010 /* DialerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialerViewModel.swift; sourceTree = "<group>"; };
+		100000000000000000000011 /* ActiveCallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCallViewModel.swift; sourceTree = "<group>"; };
+		100000000000000000000012 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		100000000000000000000013 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		100000000000000000000014 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		100000000000000000000015 /* DialerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialerView.swift; sourceTree = "<group>"; };
+		100000000000000000000016 /* ActiveCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCallView.swift; sourceTree = "<group>"; };
+		100000000000000000000017 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		100000000000000000000018 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
+		100000000000000000000019 /* sip-phonesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sip-phonesApp.swift; sourceTree = "<group>"; };
+		100000000000000000000020 /* PJSIPBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PJSIPBridge.mm; sourceTree = "<group>"; };
+		100000000000000000000021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		100000000000000000000022 /* PJSIPBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJSIPBridge.h; sourceTree = "<group>"; };
+		100000000000000000000023 /* PJSIPBridgeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJSIPBridgeDelegate.h; sourceTree = "<group>"; };
+		100000000000000000000024 /* sip-phones-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sip-phones-Bridging-Header.h"; sourceTree = "<group>"; };
+		100000000000000000000025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100000000000000000000026 /* sip-phones.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sip-phones.entitlements; sourceTree = "<group>"; };
+		100000000000000000000027 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		100000000000000000000028 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		100000000000000000000029 /* PJSIP.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PJSIP.xcconfig; sourceTree = "<group>"; };
+		100000000000000000000030 /* sip-phones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sip-phones.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100000000000000000000201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100000000000000000000301 = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000302 /* sip-phones */,
+				100000000000000000000310 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		100000000000000000000302 /* sip-phones */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000303 /* AppEntry */,
+				100000000000000000000304 /* Models */,
+				100000000000000000000305 /* Services */,
+				100000000000000000000306 /* ViewModels */,
+				100000000000000000000307 /* Views */,
+				100000000000000000000308 /* Resources */,
+				100000000000000000000309 /* Config */,
+			);
+			path = sip-phones;
+			sourceTree = "<group>";
+		};
+		100000000000000000000303 /* AppEntry */ = {
+			isa = PBXGroup;
+			children = (100000000000000000000019 /* sip-phonesApp.swift */);
+			path = AppEntry;
+			sourceTree = "<group>";
+		};
+		100000000000000000000304 /* Models */ = {
+			isa = PBXGroup;
+			children = (100000000000000000000001 /* SIPModels.swift */);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		100000000000000000000305 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000002 /* KeychainManager.swift */,
+				100000000000000000000003 /* DatabaseManager.swift */,
+				100000000000000000000004 /* LogManager.swift */,
+				100000000000000000000005 /* NotificationManager.swift */,
+				100000000000000000000006 /* SIPService.swift */,
+				100000000000000000000007 /* AudioManager.swift */,
+				100000000000000000000008 /* SettingsStore.swift */,
+				100000000000000000000020 /* PJSIPBridge.mm */,
+				100000000000000000000022 /* PJSIPBridge.h */,
+				100000000000000000000023 /* PJSIPBridgeDelegate.h */,
+				100000000000000000000024 /* sip-phones-Bridging-Header.h */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		100000000000000000000306 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000009 /* SettingsViewModel.swift */,
+				100000000000000000000010 /* DialerViewModel.swift */,
+				100000000000000000000011 /* ActiveCallViewModel.swift */,
+				100000000000000000000012 /* HistoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		100000000000000000000307 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000013 /* ContentView.swift */,
+				100000000000000000000014 /* SettingsView.swift */,
+				100000000000000000000015 /* DialerView.swift */,
+				100000000000000000000016 /* ActiveCallView.swift */,
+				100000000000000000000017 /* HistoryView.swift */,
+				100000000000000000000018 /* LogsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		100000000000000000000308 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000021 /* Assets.xcassets */,
+				100000000000000000000025 /* Info.plist */,
+				100000000000000000000026 /* sip-phones.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		100000000000000000000309 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				100000000000000000000027 /* Debug.xcconfig */,
+				100000000000000000000028 /* Release.xcconfig */,
+				100000000000000000000029 /* PJSIP.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		100000000000000000000310 /* Products */ = {
+			isa = PBXGroup;
+			children = (100000000000000000000030 /* sip-phones.app */);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		100000000000000000000401 /* sip-phones */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100000000000000000000701 /* Build configuration list for PBXNativeTarget "sip-phones" */;
+			buildPhases = (
+				100000000000000000000501 /* Sources */,
+				100000000000000000000201 /* Frameworks */,
+				100000000000000000000502 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sip-phones;
+			productName = sip-phones;
+			productReference = 100000000000000000000030 /* sip-phones.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100000000000000000000601 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					100000000000000000000401 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 100000000000000000000700 /* Build configuration list for PBXProject "sip-phones" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base);
+			mainGroup = 100000000000000000000301;
+			productRefGroup = 100000000000000000000310 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (100000000000000000000401 /* sip-phones */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100000000000000000000502 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (100000000000000000000121 /* Assets.xcassets in Resources */);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100000000000000000000501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000119 /* sip-phonesApp.swift in Sources */,
+				100000000000000000000101 /* SIPModels.swift in Sources */,
+				100000000000000000000102 /* KeychainManager.swift in Sources */,
+				100000000000000000000103 /* DatabaseManager.swift in Sources */,
+				100000000000000000000104 /* LogManager.swift in Sources */,
+				100000000000000000000105 /* NotificationManager.swift in Sources */,
+				100000000000000000000106 /* SIPService.swift in Sources */,
+				100000000000000000000107 /* AudioManager.swift in Sources */,
+				100000000000000000000108 /* SettingsStore.swift in Sources */,
+				100000000000000000000109 /* SettingsViewModel.swift in Sources */,
+				100000000000000000000110 /* DialerViewModel.swift in Sources */,
+				100000000000000000000111 /* ActiveCallViewModel.swift in Sources */,
+				100000000000000000000112 /* HistoryViewModel.swift in Sources */,
+				100000000000000000000113 /* ContentView.swift in Sources */,
+				100000000000000000000114 /* SettingsView.swift in Sources */,
+				100000000000000000000115 /* DialerView.swift in Sources */,
+				100000000000000000000116 /* ActiveCallView.swift in Sources */,
+				100000000000000000000117 /* HistoryView.swift in Sources */,
+				100000000000000000000118 /* LogsView.swift in Sources */,
+				100000000000000000000120 /* PJSIPBridge.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		100000000000000000000801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100000000000000000000027 /* Debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = sip-phones/Resources/sip-phones.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = sip-phones/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = sip-phones/Services/sip-phones-Bridging-Header.h;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = Debug;
+		};
+		100000000000000000000802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100000000000000000000028 /* Release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = sip-phones/Resources/sip-phones.entitlements;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = sip-phones/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = sip-phones/Services/sip-phones-Bridging-Header.h;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = Release;
+		};
+		100000000000000000000803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100000000000000000000027 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		100000000000000000000804 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100000000000000000000028 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100000000000000000000700 /* Build configuration list for PBXProject "sip-phones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000803 /* Debug */,
+				100000000000000000000804 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100000000000000000000701 /* Build configuration list for PBXNativeTarget "sip-phones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100000000000000000000801 /* Debug */,
+				100000000000000000000802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 100000000000000000000601 /* Project object */;
+}
