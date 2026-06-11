@@ -16,7 +16,7 @@ enum DatabaseError: LocalizedError {
     }
 }
 
-final class DatabaseManager {
+final class DatabaseManager: @unchecked Sendable {
     static let shared = DatabaseManager()
 
     private var db: OpaquePointer?

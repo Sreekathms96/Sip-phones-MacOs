@@ -18,7 +18,7 @@ enum KeychainError: LocalizedError {
     }
 }
 
-final class KeychainManager {
+final class KeychainManager: @unchecked Sendable {
     static let shared = KeychainManager()
 
     private let service = "com.sipphones.softphone.credentials"

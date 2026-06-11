@@ -1,0 +1,8 @@
+#define PJ_CONFIG_DARWIN 1
+#define PJMEDIA_HAS_VIDEO 0
+#define PJ_HAS_SSL_SOCK 1
+#define PJSIP_HAS_TLS_TRANSPORT 1
+#define PJMEDIA_AUDIO_DEV_HAS_COREAUDIO 1
+#define PJMEDIA_HAS_SRTP 1
+#define PJMEDIA_HAS_WEBRTC_AEC 1
+#include <pj/config_site_sample.h>

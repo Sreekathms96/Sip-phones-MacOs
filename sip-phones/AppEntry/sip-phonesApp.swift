@@ -46,9 +46,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCent
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        let actionIdentifier = response.actionIdentifier
         await MainActor.run {
             guard let incoming = SIPService.shared.activeCalls.first(where: { $0.state == .incoming }) else { return }
-            switch response.actionIdentifier {
+            switch actionIdentifier {
             case "ACCEPT_CALL", UNNotificationDefaultActionIdentifier:
                 SIPService.shared.answer(callId: incoming.id)
             case "REJECT_CALL":

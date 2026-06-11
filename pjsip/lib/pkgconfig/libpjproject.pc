@@ -1,0 +1,14 @@
+# Package Information for pkg-config
+
+prefix=/Users/sreekanthms/Sip-phone-MacOs/pjsip
+exec_prefix=${prefix}
+libdir=/Users/sreekanthms/Sip-phone-MacOs/pjsip/lib
+includedir=/Users/sreekanthms/Sip-phone-MacOs/pjsip/include
+
+Name: libpjproject
+Description: Multimedia communication library
+URL: http://www.pjsip.org
+Version: 2.14.1
+Libs: -L/Users/sreekanthms/Sip-phone-MacOs/pjsip/lib -lpjsua2-arm-apple-darwin25.5.0 -lstdc++ -lpjsua-arm-apple-darwin25.5.0 -lpjsip-ua-arm-apple-darwin25.5.0 -lpjsip-simple-arm-apple-darwin25.5.0 -lpjsip-arm-apple-darwin25.5.0 -lpjmedia-codec-arm-apple-darwin25.5.0 -lpjmedia-videodev-arm-apple-darwin25.5.0 -lpjmedia-audiodev-arm-apple-darwin25.5.0 -lpjmedia-arm-apple-darwin25.5.0 -lpjnath-arm-apple-darwin25.5.0 -lpjlib-util-arm-apple-darwin25.5.0 -lpj-arm-apple-darwin25.5.0
+Libs.private:  -lsrtp-arm-apple-darwin25.5.0 -lresample-arm-apple-darwin25.5.0 -lgsmcodec-arm-apple-darwin25.5.0 -lspeex-arm-apple-darwin25.5.0 -lilbccodec-arm-apple-darwin25.5.0 -lg7221codec-arm-apple-darwin25.5.0 -lwebrtc-arm-apple-darwin25.5.0  -lssl -lcrypto -lm -lpthread  -framework CoreAudio -framework CoreServices -framework AudioUnit -framework AudioToolbox -framework Foundation -framework AppKit
+Cflags: -I/Users/sreekanthms/Sip-phone-MacOs/pjsip/include -DPJ_AUTOCONF=1  -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1

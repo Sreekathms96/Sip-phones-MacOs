@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PJSIP_VERSION="${PJSIP_VERSION:-2.14.1}"
-PREFIX="${PREFIX:-/opt/pjsip}"
+PREFIX="${PREFIX:-${PWD}/pjsip}"
 WORKDIR="${WORKDIR:-$PWD/.build/pjsip}"
 
 mkdir -p "$WORKDIR"
@@ -26,10 +26,17 @@ cat > pjlib/include/pj/config_site.h <<'CONFIG'
 #include <pj/config_site_sample.h>
 CONFIG
 
-export CFLAGS="-arch arm64 -mmacosx-version-min=14.0"
-export LDFLAGS="-arch arm64 -mmacosx-version-min=14.0"
+export OPENSSL_PREFIX="$(brew --prefix openssl@3)"
 
-./configure --prefix="$PREFIX" --disable-video --enable-shared=no --with-ssl=/usr
+export CFLAGS="-arch arm64 -mmacosx-version-min=14.0 -I${OPENSSL_PREFIX}/include"
+export CPPFLAGS="-I${OPENSSL_PREFIX}/include"
+export LDFLAGS="-arch arm64 -mmacosx-version-min=14.0 -L${OPENSSL_PREFIX}/lib"
+
+./configure \
+  --prefix="$PREFIX" \
+  --disable-video \
+  --enable-shared=no \
+  --with-ssl="${OPENSSL_PREFIX}"
 make dep
 make -j"$(sysctl -n hw.logicalcpu)"
 make install

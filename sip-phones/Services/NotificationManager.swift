@@ -1,7 +1,8 @@
 import Foundation
 import UserNotifications
 
-final class NotificationManager {
+@MainActor
+final class NotificationManager: Sendable {
     static let shared = NotificationManager()
 
     private init() {}
