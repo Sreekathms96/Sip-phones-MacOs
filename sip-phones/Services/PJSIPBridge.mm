@@ -69,6 +69,15 @@ static NSString *StringFromPJ(const pj_str_t *string) {
     return [[NSString alloc] initWithBytes:string->ptr length:(NSUInteger)string->slen encoding:NSUTF8StringEncoding] ?: @"";
 }
 
+static void RegisterThreadIfNeeded(void) {
+    if (!pj_thread_is_registered()) {
+        pj_thread_desc desc;
+        pj_thread_t *thread = 0;
+        pj_bzero(desc, sizeof(desc));
+        pj_thread_register("bridge_thread", desc, &thread);
+    }
+}
+
 static void on_reg_state(pjsua_acc_id acc_id) {
     pjsua_acc_info info;
     if (pjsua_acc_get_info(acc_id, &info) != PJ_SUCCESS) { return; }
@@ -230,10 +239,11 @@ static void log_writer(int level, const char *data, int len) {
     NSString *transportLower = transport.lowercaseString;
     NSString *idURI = [NSString stringWithFormat:@"sip:%@@%@", username, domain];
     NSString *registrar = [NSString stringWithFormat:@"sip:%@:%d;transport=%@", domain, port, transportLower];
-    NSString *proxy = [NSString stringWithFormat:@"sip:%@:%d;transport=%@", domain, port, transportLower];
+    NSString *proxy = [NSString stringWithFormat:@"<sip:%@:%d;transport=%@;lr>", domain, port, transportLower];
 
     pjsua_acc_config accountConfig;
     pjsua_acc_config_default(&accountConfig);
+    RegisterThreadIfNeeded();
     accountConfig.id = pj_str((char *)idURI.UTF8String);
     accountConfig.reg_uri = pj_str((char *)registrar.UTF8String);
     accountConfig.cred_count = 1;
@@ -265,6 +275,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (BOOL)makeCallTo:(NSString *)destination domain:(NSString *)domain port:(int)port transport:(NSString *)transport error:(NSError **)error {
+    RegisterThreadIfNeeded();
     if (self.accountId == PJSUA_INVALID_ID) {
         if (error) {
             *error = [NSError errorWithDomain:PJSIPBridgeErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey: @"SIP account is not registered."}];
@@ -287,6 +298,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (BOOL)answerCall:(int)callId error:(NSError **)error {
+    RegisterThreadIfNeeded();
     pj_status_t status = pjsua_call_answer(callId, 200, NULL, NULL);
     if (status != PJ_SUCCESS) {
         if (error) { *error = BridgeError(status, @"Unable to answer call"); }
@@ -296,6 +308,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (BOOL)rejectCall:(int)callId error:(NSError **)error {
+    RegisterThreadIfNeeded();
     pj_status_t status = pjsua_call_answer(callId, 486, NULL, NULL);
     if (status != PJ_SUCCESS) {
         if (error) { *error = BridgeError(status, @"Unable to reject call"); }
@@ -305,6 +318,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (BOOL)hangupCall:(int)callId error:(NSError **)error {
+    RegisterThreadIfNeeded();
     pj_status_t status = pjsua_call_hangup(callId, 0, NULL, NULL);
     if (status != PJ_SUCCESS) {
         if (error) { *error = BridgeError(status, @"Unable to hang up call"); }
@@ -314,6 +328,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (BOOL)setHold:(BOOL)hold callId:(int)callId error:(NSError **)error {
+    RegisterThreadIfNeeded();
     pj_status_t status = hold ? pjsua_call_set_hold(callId, NULL) : pjsua_call_reinvite(callId, PJSUA_CALL_UNHOLD, NULL);
     if (status != PJ_SUCCESS) {
         if (error) { *error = BridgeError(status, hold ? @"Unable to hold call" : @"Unable to resume call"); }
@@ -323,6 +338,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (BOOL)setMuted:(BOOL)muted callId:(int)callId error:(NSError **)error {
+    RegisterThreadIfNeeded();
     pjsua_call_info info;
     pj_status_t status = pjsua_call_get_info(callId, &info);
     if (status != PJ_SUCCESS) {
@@ -338,6 +354,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (BOOL)sendDTMF:(NSString *)digits callId:(int)callId error:(NSError **)error {
+    RegisterThreadIfNeeded();
     pj_str_t pjDigits = pj_str((char *)digits.UTF8String);
     pj_status_t status = pjsua_call_dial_dtmf(callId, &pjDigits);
     if (status != PJ_SUCCESS) {
@@ -348,6 +365,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (NSArray<PJSIPAudioDevice *> *)audioDevices {
+    RegisterThreadIfNeeded();
     unsigned count = 64;
     pjmedia_aud_dev_info devices[64];
     pj_status_t status = pjsua_enum_aud_devs(devices, &count);
@@ -362,6 +380,7 @@ static void log_writer(int level, const char *data, int len) {
 }
 
 - (BOOL)setInputDevice:(int)inputDevice outputDevice:(int)outputDevice error:(NSError **)error {
+    RegisterThreadIfNeeded();
     pj_status_t status = pjsua_set_snd_dev(inputDevice, outputDevice);
     if (status != PJ_SUCCESS) {
         if (error) { *error = BridgeError(status, @"Unable to select audio devices"); }
